@@ -1,0 +1,55 @@
+{
+  "name": "aadinternals",
+  "version": "1.0.0",
+  "description": "AADInternals JS module for administering Azure AD and Office 365",
+  "main": "dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register tests/**/*.test.ts",
+    "eslint": "./node_modules/.bin/eslint --fix src/*",
+    "pack": "npm pack",
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+    "docs": "npx typedoc --out docs src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aliyss/AADInternals.js.git"
+  },
+  "author": "aliyss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aliyss/AADInternals.js/issues"
+  },
+  "homepage": "https://github.com/Aliyss/AADInternals.js#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.0.4",
+    "@types/node-fetch": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "chai": "^4.3.6",
+    "esbuild-node-tsc": "^1.8.6",
+    "eslint": "^8.19.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "typedoc": "^0.23.7",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "xml-js": "^1.6.11"
+  }
+}
